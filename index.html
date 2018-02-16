@@ -65,26 +65,26 @@
   .bindPopup("Bureau ACTED"); // EDIT pop-up text message
 
   /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
-  // var customLayer = L.geoJson(null, {
-  //  onEachFeature: function(feature, layer) {
-  //    layer.bindPopup(feature.properties.Title);
-  //  }
-  // });
-  // var runLayer = omnivore.csv('data.csv', null, customLayer)
-  // .on('ready', function() {
-  //  map.fitBounds(runLayer.getBounds());
-  // }).addTo(map);
-  // controlLayers.addOverlay(customLayer, 'Markers from data.csv');
+   var customLayer = L.geoJson(null, {
+    onEachFeature: function(feature, layer) {
+      layer.bindPopup(feature.properties.Title);
+    }
+   });
+   var runLayer = omnivore.csv('data.csv', null, customLayer)
+   .on('ready', function() {
+    map.fitBounds(runLayer.getBounds());
+   }).addTo(map);
+   controlLayers.addOverlay(customLayer, 'Markers from data.csv');
     
     
-    var popup = L.popup();
+    /*var popup = L.popup();
       function onMapClick(e) {
       popup
         .setLatLng(e.latlng)
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(mymap);
        }
-    mymap.on('click', onMapClick);
+    mymap.on('click', onMapClick);*/
 
   </script>
 </body>
