@@ -25,7 +25,7 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">Sebbo's Niger map v4.6</div>
+  <div id="map-title">Sebbo's Niger map v4.7</div>
   <div id="map"></div>
 
   <!-- Create the map content with JavaScript (.js) -->
@@ -39,6 +39,9 @@
     worldCopyJump: true
   });
 
+    L.control.mousePosition().addTo(map);
+    
+    
   /* Control panel to display map layers */
   // var controlLayers = L.control.layers( null, null, {
   //  position: "topright",
@@ -56,10 +59,8 @@
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
   }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-
-  /* 
-  L.control.mousePosition().addTo(map);  
-  */
+  
+  
     
   /* Display a blue point marker with pop-up text */
   L.marker([13.520212, 2.074408]).addTo(map) // EDIT latitude, longitude to re-position marker
