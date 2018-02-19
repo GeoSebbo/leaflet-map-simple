@@ -57,6 +57,9 @@
   }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
 
+   
+  L.control.mousePosition().addTo(map);  
+    
   /* Display a blue point marker with pop-up text */
   L.marker([13.520212, 2.074408]).addTo(map) // EDIT latitude, longitude to re-position marker
   .bindPopup("Cap Banga"); // EDIT pop-up text message
@@ -88,8 +91,7 @@
        }
     mymap.on('click', onMapClick);
     */
-    
-    L.control.mousePosition().addTo(map);
+   
     
 
   </script>
