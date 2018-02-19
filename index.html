@@ -28,7 +28,7 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">Sebbo's Niger map v4.9</div>
+  <div id="map-title">Sebbo's Niger map v4.10</div>
   <div id="map"></div>
 
   <!-- Script for the mouse-coordinate indicator-->
@@ -45,7 +45,7 @@
     worldCopyJump: true
   });
 
-    /*mouse coordinate indicator - currently not working*/
+    /*mouse coordinate indicator*/
     
     L.control.mousePosition().addTo(map);
     
@@ -53,10 +53,10 @@
     
     
   /* Control panel to display map layers */
-  // var controlLayers = L.control.layers( null, null, {
-  //  position: "topright",
-  //  collapsed: false
-  // }).addTo(map);
+   var controlLayers = L.control.layers( null, null, {
+    position: "topright",
+    collapsed: false
+   }).addTo(map);
 
   /* Carto light-gray basemap tiles with labels */
   var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
@@ -91,18 +91,6 @@
     map.fitBounds(runLayer.getBounds());
    }).addTo(map);
    controlLayers.addOverlay(customLayer, 'Markers from datanew.csv');
-    
-    /*This part should display a popup with the mouse coordinates but does not work a this point*/
-   /*
-    var popup = L.popup();
-      function onMapClick(e) {
-      popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(mymap);
-       }
-    mymap.on('click', onMapClick);
-    */
    
     
 
