@@ -25,7 +25,7 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">Sebbo's Niamey map v4.4</div>
+  <div id="map-title">Sebbo's Niamey map v4.5</div>
   <div id="map"></div>
 
   <!-- Create the map content with JavaScript (.js) -->
@@ -77,7 +77,8 @@
    }).addTo(map);
    controlLayers.addOverlay(customLayer, 'Markers from datanew.csv');
     
-    
+    /*This part should display a popup with the mouse coordinates but does not work a this point*/
+   /*
     var popup = L.popup();
       function onMapClick(e) {
       popup
@@ -86,6 +87,10 @@
         .openOn(mymap);
        }
     mymap.on('click', onMapClick);
+    */
+    
+    L.control.mousePosition().addTo(map);
+    
 
   </script>
 </body>
