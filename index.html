@@ -25,7 +25,7 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">Sebbo's Niamey map v4.3</div>
+  <div id="map-title">Sebbo's Niamey map v4.4</div>
   <div id="map"></div>
 
   <!-- Create the map content with JavaScript (.js) -->
@@ -35,7 +35,8 @@
   var map = L.map('map', {
     center: [13.55, 2.06], // EDIT latitude, longitude to re-center map
     zoom: 14,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
-    scrollWheelZoom: true
+    scrollWheelZoom: true,
+    worldCopyJump: true
   });
 
   /* Control panel to display map layers */
